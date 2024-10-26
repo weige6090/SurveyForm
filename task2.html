@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task2</title>
+
+</head>
+<body>
+    <h2>加法运算</h2>
+    <form>
+        <p><label for="number1">输入第一个数字</label></p>
+        <p><input type="text" id="number1" name="number1"></p>
+        <p><label for="number2">输入第二个数字</label></p>
+        <p><input type="text" id="number2" name="number2"></p>
+        <button type="button" id="button1" onclick="add()"></button>
+        <script>
+            function add(){
+            let num1 = document.getElementById("number1").value;
+            let num2 = document.getElementById("number2").value;
+            if (isNaN(num1) || isNaN(num2)) {
+            console.error("请输入有效的数字");
+            }
+            else{       
+            num1 = parseFloat(num1);
+            num2 = parseFloat(num2);
+            let sum = num1 + num2;
+            const button = document.getElementById("button1");
+            button.addEventListener("click",function(){
+                alert(sum);
+            });}
+            }
+        </script>
+    </form>
+</body>
+</html>
